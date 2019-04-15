@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,26 @@
     <title>A Game of Simon</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-</head>                     
-<body> 
-  <header><h1>Simple Simon Game</h1></header>
+</head>
 
-<div class="row">
-    <div class="field red"></div>
-    <div class="field blue"></div>
-</div>
-<div class="row">
-    <div class="field yellow"></div>
-    <div class="field green"></div>
-</div>
-<div class="buttons">
-	<button id="start">start</button>
-	<button id="reset">reset</button>
-</div>
+<body>
+    <header>
+        <h1>Simple Simon Game</h1>
+    </header>
+
+    <div class="row" style="margin-left: 120px">
+        <button class="field red"></button>
+        <button class="field blue"></button>
+    </div>
+    <div class="row" style="margin-left: 120px">
+        <button class="field yellow"></button>
+        <button class="field green"></button>
+    </div>
+    <div class="buttons">
+        <button id="start">start</button>
+        <button id="reset">reset</button>
+    </div>
+    <script src="assets/js/game.js"></script>
 </body>
+
 </html>

@@ -5,7 +5,7 @@
 body {
 	width: 850px;
 	margin: 0 auto;
-	background: #2c3e50;
+	background: #a2a5aa;
 
 }
 
@@ -14,8 +14,8 @@ body {
 	width: 150px;
 	height: 150px;
 	float: left;
-	margin-left: 200px;
-	margin-bottom: 50px;
+	margin-left: 100px;
+	margin-bottom: 100px;
 	border-radius: 2px;
 	transition: 0.2s;
 }
