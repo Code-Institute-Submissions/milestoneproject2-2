@@ -9,6 +9,10 @@ function playSound(id) {
 }
 
 var fields = document.querySelectorAll('.field');
+var redButton = document.querySelector('#red')
+var blueButton = document.querySelector('#blue')
+var yellowButton = document.querySelector('#yellow')
+var greenButton = document.querySelector('#green')
 var startButton = document.querySelector('#start');
 var resetButton = document.querySelector('#reset');
 
@@ -29,6 +33,7 @@ function addtoOrder(){
 }
 
 function showSteps() {
+    userinput = [];
     if (currentStep > game.length - 1) {
         currentStep = 0
         return;
@@ -50,6 +55,17 @@ function showSteps() {
     }, 0.6 * 1000);
 }
 
+function compareOrders(){
+    var id = currentStep;
+    if(game[currentStep] != userinput[currentStep]){
+        window.alert("Game Over, Try Again!");
+        reset();
+    }
+    else if(game[currentStep] == userinput[currentStep] && userinput.length == game.length){
+        addtoOrder();
+        timeout = setTimeout(showSteps, 0.6 * 1000);
+    }
+}
 
 startButton.onclick = function(){
     this.disabled = true;
@@ -60,12 +76,45 @@ startButton.onclick = function(){
     activegame = true;
 }
 
-resetButton.onclick = reset;
+resetButton.onclick = reset();
 
 function reset() {
 	startButton.disabled = false;
 	game = [];
+	userinput = [];
 	activegame = false;
 	currentStep = 0;
 	clearTimeout(timeout);
+}
+
+redButton.onclick = function(){
+    if (activegame == true) {
+        playSound(0);
+        userinput.push(0);
+        compareOrders();
+    }
+}
+
+blueButton.onclick = function(){
+    if (activegame == true) {
+        playSound(1);
+        userinput.push(1);
+        compareOrders();
+    }
+}
+
+yellowButton.onclick = function(){
+    if (activegame == true) {
+        playSound(2);
+        userinput.push(2);
+        compareOrders();
+    }
+}
+
+greenButton.onclick = function(){
+    if (activegame == true) {
+        playSound(3);
+        userinput.push(3);
+        compareOrders();
+    }
 }
