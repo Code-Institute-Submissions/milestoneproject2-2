@@ -9,12 +9,13 @@ function playSound(id) {
 }
 
 var fields = document.querySelectorAll('.field');
-var redButton = document.querySelector('#red')
-var blueButton = document.querySelector('#blue')
-var yellowButton = document.querySelector('#yellow')
-var greenButton = document.querySelector('#green')
+var redButton = document.querySelector('#red');
+var blueButton = document.querySelector('#blue');
+var yellowButton = document.querySelector('#yellow');
+var greenButton = document.querySelector('#green');
 var startButton = document.querySelector('#start');
 var resetButton = document.querySelector('#reset');
+var helpButton = document.querySelector('#help');
 
 var activegame = false;
 var game = [];
@@ -76,8 +77,6 @@ startButton.onclick = function(){
     activegame = true;
 }
 
-resetButton.onclick = reset();
-
 function reset() {
 	startButton.disabled = false;
 	game = [];
@@ -85,6 +84,14 @@ function reset() {
 	activegame = false;
 	currentStep = 0;
 	clearTimeout(timeout);
+}
+
+resetButton.onclick = function() {
+    reset();
+}
+
+helpButton.onclick = function(){
+    window.alert("Watch the sequence and try to copy it!");
 }
 
 redButton.onclick = function(){
