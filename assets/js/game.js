@@ -1,12 +1,9 @@
 var sounds = [
-	new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'),
-	new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3'),
-	new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3'),
-	new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3')
+    new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3'),
+    new Audio('https://s3.amazonaws.com/freecodecamp/simonSound2.mp3'),
+    new Audio('https://s3.amazonaws.com/freecodecamp/simonSound3.mp3'),
+    new Audio('https://s3.amazonaws.com/freecodecamp/simonSound4.mp3')
 ];
-function playSound(id) {
-	sounds[id].play();
-}
 
 var fields = document.querySelectorAll('.field');
 var redButton = document.querySelector('#red');
@@ -19,18 +16,22 @@ var helpButton = document.querySelector('#help');
 
 var activegame = false;
 var game = [];
-var userinput= [];
+var userinput = [];
 var currentStep = 0;
 var timeout;
 
-function createOrder(){
-    for (i = 0; i < 3; i++){
+function createOrder() {
+    for (i = 0; i < 3; i++) {
         game.push(Math.floor(Math.random() * 3))
     }
 }
 
-function addtoOrder(){
+function addtoOrder() {
     game.push(Math.floor(Math.random() * 3));
+}
+
+function playSound(id) {
+    sounds[id].play();
 }
 
 function showSteps() {
@@ -46,55 +47,58 @@ function showSteps() {
     fields[id].className += ' active';
 
     setTimeout(function() {
-
-        fields[id].className = fields[id].className.replace(' active', ''); //switch the button to "active"
+        //switch the button to "active"
         //so it looks as though it has been pressed
+        fields[id].className = fields[id].className.replace(' active', '');
         currentStep++;
-
-        timeout = setTimeout(showSteps, 0.3 * 1000); // give time for transition to finish
-
+        // give time for transition to finish
+        timeout = setTimeout(showSteps, 0.3 * 1000); 
     }, 0.6 * 1000);
 }
 
-function compareOrders(){
+function compareOrders() {
     var id = currentStep;
-    if(game[currentStep] != userinput[currentStep]){
+    if (game[currentStep] == userinput[currentStep] && userinput.length == game.length) {
+        currentStep = 0;
+        addtoOrder();
+        timeout = setTimeout(showSteps, 0.6 * 1000);
+        return;
+    }
+    else if (game[currentStep] != userinput[currentStep]) {
         window.alert("Game Over, Try Again!");
         reset();
     }
-    else if(game[currentStep] == userinput[currentStep] && userinput.length == game.length){
-        addtoOrder();
-        timeout = setTimeout(showSteps, 0.6 * 1000);
-    }
+    currentStep++;
 }
 
-startButton.onclick = function(){
+startButton.onclick = function() {
     this.disabled = true;
     var game = [];
     var userinput = [];
+    currentStep = 0;
     createOrder();
     showSteps();
     activegame = true;
 }
 
 function reset() {
-	startButton.disabled = false;
-	game = [];
-	userinput = [];
-	activegame = false;
-	currentStep = 0;
-	clearTimeout(timeout);
+    startButton.disabled = false;
+    game = [];
+    userinput = [];
+    activegame = false;
+    currentStep = 0;
+    clearTimeout(timeout);
 }
 
 resetButton.onclick = function() {
     reset();
 }
 
-helpButton.onclick = function(){
-    window.alert("Watch the sequence and try to copy it!");
+helpButton.onclick = function() {
+    window.alert("Press play and what the sequence that plays out, try to press the buttons in the same order! The game will get harder each time you match the sequence.");
 }
 
-redButton.onclick = function(){
+redButton.onclick = function() {
     if (activegame == true) {
         playSound(0);
         userinput.push(0);
@@ -102,7 +106,7 @@ redButton.onclick = function(){
     }
 }
 
-blueButton.onclick = function(){
+blueButton.onclick = function() {
     if (activegame == true) {
         playSound(1);
         userinput.push(1);
@@ -110,7 +114,7 @@ blueButton.onclick = function(){
     }
 }
 
-yellowButton.onclick = function(){
+yellowButton.onclick = function() {
     if (activegame == true) {
         playSound(2);
         userinput.push(2);
@@ -118,7 +122,7 @@ yellowButton.onclick = function(){
     }
 }
 
-greenButton.onclick = function(){
+greenButton.onclick = function() {
     if (activegame == true) {
         playSound(3);
         userinput.push(3);

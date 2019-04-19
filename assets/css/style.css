@@ -1,11 +1,12 @@
 * {
 	box-sizing: border-box;
+	font-family: "Exo", sans-serif;
 }
 
 body {
 	width: 850px;
 	margin: 0 auto;
-	background: #a2a5aa;
+	background: #4a4b4c;
 
 }
 
@@ -62,6 +63,10 @@ button {
 	transition: 0.3s;
 }
 
+#start{
+	background: rgb(43,192,57);
+}
+
 button:active, button:disabled {
 	background: rgb(189, 195, 199);
 }
@@ -93,3 +98,8 @@ button.red {
 	background: rgb(192, 57, 43);
 	color: white;
 }
+
+button:hover{
+	color:rgba(0, 0, 0, 0.1);
+}
+
