@@ -67,6 +67,10 @@ button {
 	background: rgb(43,192,57);
 }
 
+#start:active, #start:disabled{
+	background: rgb(35, 90, 40);
+}
+
 button:active, button:disabled {
 	background: rgba(189, 195, 199, 1);
 }
