@@ -29,8 +29,11 @@ All of the code for this can be found in game.js, spread across multiple functio
 ## Testing
 
 1. Game:
-    1. Test to run - gif/image of test - result
-    2. Pressing start should start the game and display the first sequence of three random squares - [Test](https://gyazo.com/f475edc09d139133af818b57b7cb613a) - Passed
+    1. Pressing "start" should start the game and display the first sequence of three random squares - [Result](https://gyazo.com/f475edc09d139133af818b57b7cb613a) - Passed
+    2. Presing "reset" should stop the sequence and unlock the start button - [Result](https://gyazo.com/e1a3cd8d15f36fc47647d217dfa6ba90) - Passed
+    3. Pressing "help" should show the help pop-up - [Result](https://gyazo.com/e80a681aa8e75a08cf80d97b5ece99e4) - Passed
+    4. Getting the sequence wrong should fail the game, forcing the user to restart - [Result](https://gyazo.com/c7c4652631083fe50e2f275beca41faa) - Passed
+    5. Getting the sequence right should extend the sequence by one - [Result](https://gyazo.com/5f8afadf58cbc03e5bb3c338412c40aa) - Passed
 
 
 ## Deployment

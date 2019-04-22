@@ -68,7 +68,7 @@ button {
 }
 
 button:active, button:disabled {
-	background: rgb(189, 195, 199);
+	background: rgba(189, 195, 199, 1);
 }
 
 
