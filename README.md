@@ -6,10 +6,12 @@ In some versions of the game the sequence gets faster as well as increasing the 
 ## UX
  
 This website is for user who want to play a game of Simon, as such when making it I wanted to ensure that none of the colours were so bright it would hurt users eyes if they looked at the game for an extended period of time.
- -As a user I wanted to be able to be able to quickly have some sort of "help" pop-up so that anyone who was unsure of how to play could find out without needing to look to external resources.
- -The user should also be able to reset the game whenever they want to via the use of a "reset" button.
+ - As a user I wanted to be able to be able to quickly have some sort of "help" pop-up so that anyone who was unsure of how to play could find out without needing to look to external resources.
+ - The user should also be able to reset the game whenever they want to via the use of a "reset" button.
+
 Below is a link to the wireframe that was used for this website
-https://gyazo.com/bd9ee24feeb9aba8a1118e70dbcc9a22
+(https://gyazo.com/bd9ee24feeb9aba8a1118e70dbcc9a22)
+
 
 ## Features
 
@@ -18,10 +20,11 @@ All of the code for this can be found in game.js, spread across multiple functio
 
 ## Technologies Used
 
--[JavaScript](https://www.javascript.com/)
-    -JavaScript was used in the project to handle the random number generator as well as displaying the sequence and comparing the users input to the "game input".
--[BootStrap](https://www.bootstrapcdn.com/)
-    -BootStrap was used to create rows for the game buttons and the "start","reset" and "help" buttons to sit in.
+- [JavaScript](https://www.javascript.com/)
+    - JavaScript was used in the project to handle the random number generator as well as displaying the sequence and comparing the users input to the "game input".
+- [BootStrap](https://www.bootstrapcdn.com/)
+    - BootStrap was used to create rows for the game buttons and the "start","reset" and "help" buttons to sit in.
+
 ## Testing
 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
@@ -54,6 +57,7 @@ To run this code locally simply download all the files and ensure they are all i
 ## Credits
 
 ### Media
-    -The sound files used came from [freecodecamp](https://www.freecodecamp.org/)
+    - The sound files used came from [freecodecamp](https://www.freecodecamp.org/)
+    
 ### Acknowledgements
-    -I recived inpsiration from various guides online on how to make random number generators for javascript.
+    - I recived inpsiration from various guides online on how to make random number generators for javascript.
