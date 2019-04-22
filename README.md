@@ -6,8 +6,9 @@ In some versions of the game the sequence gets faster as well as increasing the 
 ## UX
  
 This website is for user who want to play a game of Simon, as such when making it I wanted to ensure that none of the colours were so bright it would hurt users eyes if they looked at the game for an extended period of time.
+
  - As a user I wanted to be able to be able to quickly have some sort of "help" pop-up so that anyone who was unsure of how to play could find out without needing to look to external resources.
- - The user should also be able to reset the game whenever they want to via the use of a "reset" button.
+ - As a user I should also be able to reset the game whenever I want to via the use of a "reset" button.
 
 Below is a link to the wireframe that was used for this website
 (https://gyazo.com/bd9ee24feeb9aba8a1118e70dbcc9a22)
@@ -57,7 +58,7 @@ To run this code locally simply download all the files and ensure they are all i
 ## Credits
 
 ### Media
-    - The sound files used came from [freecodecamp](https://www.freecodecamp.org/)
-    
+- The sound files used came from [freecodecamp](https://www.freecodecamp.org/)
+
 ### Acknowledgements
-    - I recived inpsiration from various guides online on how to make random number generators for javascript.
+- I recived inpsiration from various guides online on how to make random number generators for javascript.
