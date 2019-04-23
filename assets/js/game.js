@@ -52,8 +52,8 @@ function showSteps() {
         fields[id].className = fields[id].className.replace(' active', '');
         currentStep++;
         // give time for transition to finish
-        timeout = setTimeout(showSteps, 0.3 * 1000); 
-    }, 0.6 * 1000);
+        timeout = setTimeout(showSteps, 300); 
+    }, 600);
 }
 
 function compareOrders() {
@@ -61,7 +61,7 @@ function compareOrders() {
     if (game[currentStep] == userinput[currentStep] && userinput.length == game.length) {
         currentStep = 0;
         addtoOrder();
-        timeout = setTimeout(showSteps, 0.6 * 1000);
+        timeout = setTimeout(showSteps, 600);
         return;
     }
     else if (game[currentStep] != userinput[currentStep]) {
