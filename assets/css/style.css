@@ -6,23 +6,32 @@
 body {
 	width: 850px;
 	margin: 0 auto;
+	padding-top: 2.5%;
 	background: #4a4b4c;
 
 }
 
+.row{
+	height:30%;
+	margin:0 10%;
+}
+
 .field {
 	opacity: 1.0;
-	width: 150px;
-	height: 150px;
+	/*width: 150px;
+	height: 150px;*/
+	width: 10vw;
+	height: 20vh;
 	float: left;
-	margin-left: 100px;
-	margin-bottom: 100px;
+	margin: 50px;
+	/*margin-left: 100px;
+	margin-bottom: 100px;*/
 	border-radius: 2px;
 	transition: 0.2s;
 }
 
 .field:hover {
-	transform: /*rotate(2deg)*/ scale(1.1);
+	transform: scale(1.1);
 }
 
 .field:active {
@@ -54,6 +63,7 @@ body {
 button {
 	min-width: 120px;
 	font-weight: bold;
+	font-size: 20px;
 	background: rgb(236, 240, 241);
 	border-radius: 2px;
 	color: rgb(52, 73, 94);
@@ -65,10 +75,15 @@ button {
 
 #start{
 	background: rgb(43,192,57);
+	color: white;
 }
 
 #start:active, #start:disabled{
 	background: rgb(35, 90, 40);
+}
+
+#start:hover{
+	background: #208c2a;
 }
 
 button:active, button:disabled {
@@ -89,6 +104,7 @@ h1 {
 	text-align: center;
 	font-size: 42px;
 	color: rgb(236, 240, 241);
+	padding-bottom: 2.5%;
 }
 
 .buttons {
@@ -103,7 +119,7 @@ button.red {
 	color: white;
 }
 
-button:hover{
-	color:rgba(0, 0, 0, 0.1);
+#reset:hover, #help:hover{
+	background: #acafaf;
 }
 
