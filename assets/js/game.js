@@ -58,6 +58,7 @@ function showSteps() {
 
 function compareOrders() {
     var id = currentStep;
+    //check if the order is correct and see if it is the end of the sequence, if it is and the user input is correct so far, add one more onto the sequence and show it again from the start
     if (game[currentStep] == userinput[currentStep] && userinput.length == game.length) {
         currentStep = 0;
         addtoOrder();
